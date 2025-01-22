@@ -1,104 +1,125 @@
+# Express.js + TypeScript + MongoDB Starter Kit ✨
 
-
-# Express.js + TypeScript Starter Kit 🙌  
-
-A simple and modern **Express.js** starter kit powered by **TypeScript** to help you quickly set up a scalable backend project. This kit is designed to streamline development with TypeScript's type safety and Express.js's robust routing capabilities.  
+A robust and modern **Express.js** starter template built with **TypeScript** and **MongoDB**, designed for scalability, maintainability, and fast development. This starter kit includes essential configurations and tools to jumpstart your backend project.
 
 ---
 
-## Table of Contents  
-- [Features](#features)  
-- [Getting Started](#getting-started)  
-- [Scripts](#scripts)  
-- [Folder Structure](#folder-structure)  
-- [License](#license)  
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Folder Structure](#folder-structure)
+- [Environment Variables](#environment-variables)
+- [License](#license)
 
 ---
 
-## Features  
+## Features
+
 ✅ Built with **Express.js** for backend routing and APIs.  
-✅ Powered by **TypeScript** for better type safety and maintainability.  
-✅ Pre-configured for **development** and **production** environments.  
-✅ Easy-to-use, modular, and scalable codebase.  
+✅ Powered by **TypeScript** for type safety and better developer experience.  
+✅ Includes **MongoDB** integration with modular database connection handling.  
+✅ Integrated **Winston** for advanced logging.  
+✅ Configured **Morgan** middleware for HTTP request logging.  
+✅ Scalable and modular folder structure for easy extension.  
+✅ Pre-configured development and production environments.  
 
 ---
 
-## Getting Started  
+## Getting Started
 
-### Prerequisites  
-Ensure you have the following installed on your machine:  
-- **Node.js**: [Download Here](https://nodejs.org/)  
-- **npm**: Comes with Node.js installation.  
-- **Git**: [Download Here](https://git-scm.com/)  
+### Prerequisites
+Ensure you have the following installed on your machine:
 
-### Installation  
+- **Node.js**: [Download Here](https://nodejs.org/)
+- **npm**: Comes with Node.js installation.
+- **MongoDB**: [Download Here](https://www.mongodb.com/try/download/community)
+- **Git**: [Download Here](https://git-scm.com/)
 
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/Abdev1205/express-ts-starter-kit.git  
-   ```  
+### Installation
 
-2. Navigate to the project directory:  
-   ```bash  
-   cd express-ts-starter-kit  
-   ```  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Abdev1205/express-ts-mongodb-template.git
+   ```
 
-3. Install dependencies and run the development server:  
-   ```bash  
-   npm install && npm run dev  
-   ```  
+2. Navigate to the project directory:
+   ```bash
+   cd express-ts-mongodb-template
+   ```
 
-4. If you encounter an error, close the running server and restart it:  
-   ```bash  
-   npm run dev  
-   ```  
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-5. Open your browser and navigate to:  
-   [http://localhost:4000](http://localhost:4000)  
+4. Set up your environment variables in a `.env` file (see [Environment Variables](#environment-variables)).
 
----
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Scripts  
-
-| Command             | Description                          |  
-|---------------------|--------------------------------------|  
-| `npm install`       | Installs the required dependencies. |  
-| `npm run dev`       | Starts the development server.      |  
-| `npm run build`     | Compiles the TypeScript files.      |  
-| `npm start`         | Runs the production server.         |  
+6. Open your browser and navigate to:
+   [http://localhost:4000](http://localhost:4000)
 
 ---
 
-## Folder Structure  
+## Scripts
 
-```plaintext  
-📦express-ts-starter-kit  
- ┣ 📂src               # Source code  
- ┃ ┣ 📂routes          # API route files  
- ┃ ┣ 📂controllers     # Logic for handling routes  
- ┃ ┣ 📂middlewares     # Custom middleware files  
- ┃ ┗ index.ts          # Entry point for the application  
- ┣ 📂dist              # Compiled JavaScript files (auto-generated)  
- ┣ .gitignore          # Git ignore file  
- ┣ package.json        # Project dependencies and scripts  
- ┣ tsconfig.json       # TypeScript configuration  
- ┗ README.md           # Documentation  
-```  
+| Command             | Description                               |
+|---------------------|-------------------------------------------|
+| `npm install`       | Installs the required dependencies.       |
+| `npm run dev`       | Starts the development server.            |
+| `npm run build`     | Compiles TypeScript files into JavaScript.|
+| `npm start`         | Runs the production server.               |
+| `npm run watch`     | Watches TypeScript files for changes.     |
+| `npm run server`    | Starts the server using Node.js.          |
 
 ---
 
-## License  
-This project is licensed under the **MIT License**. Feel free to use it for personal or commercial purposes.  
+## Folder Structure
+
+```plaintext
+├── express-ts-mongodb-template
+ ├── README.md        # Project documentation
+ ├── package.json     # Project dependencies and scripts
+ ├── tsconfig.json    # TypeScript configuration
+ ├── .gitignore       # Git ignore file
+ ├── .env            # Environment variables (not committed)
+ ├── src              # Source code
+ │   ├── index.ts     # Application entry point
+ │   ├── config       # Configuration files
+ │   │   ├── ENV.ts         # Environment variables configuration
+ │   │   └── mongoDb.ts     # MongoDB connection setup
+ │   ├── middleware   # Custom middleware
+ │   │   └── morgan.middleware.ts # HTTP request logging
+ │   └── utils         # Utility functions
+ │       └── logger.ts          # Winston logging configuration
+ ├── dist            # Compiled JavaScript files (auto-generated)
+```
 
 ---
 
-### Developed with ❤️ by [Abhay Mishra](https://abhaymishra.in)  
+## Environment Variables
+
+Create a `.env` file in the root directory and add the following variables:
+
+```plaintext
+PORT=4000
+FRONTEND_URL=http://localhost:3000
+MONGO_URL=mongodb://localhost:27017/your_database_name
+NODE_ENV=development
+```
 
 ---
 
-### **Repository Description**  
+## License
 
-A **TypeScript-based Express.js Starter Kit** designed for rapid backend development. This project offers a modular, scalable structure with essential configurations to kickstart your next web application.  
+This project is licensed under the **MIT License**. Feel free to use it for personal or commercial purposes.
 
-With features like built-in type safety, modern JavaScript support, and easy-to-understand folder organization, it's perfect for developers looking for a clean and efficient starting point.  
+---
+
+### Developed with ❤️ by [Abhay Mishra](https://abhaymishra.in)
 
